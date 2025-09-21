@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="google-site-verification" content="your_verification_string" />
+    <title>Trần Văn Tám — Website cá nhân, Lập trình & Điện tử Viễn thông</title>
+    <meta name="description" content="Website cá nhân của Trần Văn Tám. Hồ sơ, dự án lập trình, tài liệu học tập về Điện tử Viễn thông và IoT." />
+    
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
+    <meta property="og:title" content="Trần Văn Tám — Website cá nhân" />
+    <meta property="og:description" content="Hồ sơ, dự án, và cách liên hệ." />
+    <meta name="theme-color" content="#0f172a" />
+    <style>
+        :root{
+            --bg:#0f172a; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.04);
+            --radius:14px; --maxw:1100px;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        *{box-sizing:border-box}
+        body{margin:0;background:linear-gradient(180deg,#061022 0%, #071228 50%, var(--bg) 100%);color:#e6eef6;line-height:1.6}
+        .container{max-width:var(--maxw);margin:32px auto;padding:24px}
+
+        /* Header */
+        header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+        .brand{display:flex;align-items:center;gap:12px}
+        .logo{width:56px;height:56px;border-radius:12px;background:var(--card);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+        .logo strong{font-size:18px;color:var(--accent)}
+        nav{display:flex;gap:14px}
+        nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:10px}
+        nav a:hover{color:#fff;background:var(--glass)}
+        .cta{background:linear-gradient(90deg,var(--accent),#8b5cf6);color:#041024;padding:10px 14px;border-radius:12px;font-weight:600;text-decoration:none}
+
+        /* Hero */
+        .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-top:28px}
+        .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:26px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+        h1{margin:0;font-size:32px}
+        p.lead{color:var(--muted);margin-top:10px}
+        .tags{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+        .tag{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+        /* Profile */
+        .profile{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+        .avatar{width:180px;height:180px;border-radius:20px;background:linear-gradient(135deg,#0ea5a4,#7c3aed);display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:700;color:#041024;box-shadow:0 10px 30px rgba(12,18,40,0.6)}
+        .contact{display:flex;flex-direction:column;gap:6px;width:100%}
+        .contact a{display:flex;justify-content:space-between;padding:10px;border-radius:10px;text-decoration:none;color:#e6eef6;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02))}
+
+        /* Grid sections */
+        .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:24px}
+        .projects .item{padding:14px;border-radius:12px;background:var(--card);display:flex;flex-direction:column;gap:8px}
+        .project-title{font-weight:700}
+        footer{margin-top:28px;color:var(--muted);text-align:center;font-size:14px}
+
+        /* Contact form */
+        form{display:flex;flex-direction:column;gap:12px}
+        input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:#e6eef6}
+        button[type=submit]{border:0;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer}
+
+        /* Toggle folder */
+        .hidden { display: none; }
+        .folder { cursor: pointer; color: var(--accent); margin-top:8px; }
+        .folder:hover { text-decoration: underline; }
+
+        /* Responsive */
+        @media (max-width:900px){
+            .hero{grid-template-columns:1fr;}
+            .grid{grid-template-columns:1fr}
+            .avatar{width:140px;height:140px}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="logo"><strong>TT</strong></div>
+                <img src="avatar.jpg" alt="Trần Văn Tám" class="avatar">
+                <div>
+                    <div style="font-weight:700">Trần Văn Tám</div>
+                    <div style="font-size:13px;color:var(--muted)">Trường Đại học Bách khoa - Đại học Đà Nẵng</div>
+                </div>
+            </div>
+            <nav>
+                <a href="#about">Giới thiệu</a>
+                <a href="#projects">Dự án</a>
+                <a href="#docs">Tài liệu học tập</a>
+                <a href="#contact">Liên hệ</a>
+                <a class="cta" href="#contact">Tải CV</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="card">
+                <h1>Xin chào — tôi là Trần Văn Tám</h1>
+                <p class="lead">
+                    Tôi là **Trần Văn Tám**, sinh viên ngành Kỹ thuật điện tử viễn thông tại Trường Đại học Bách khoa - Đại học Đà Nẵng. Với niềm đam mê sâu sắc với lập trình, điện tử và các công nghệ mới, tôi luôn tìm tòi và áp dụng kiến thức vào các dự án thực tế. <br>
+                    Tôi có kinh nghiệm với các ngôn ngữ lập trình như **C++, JavaScript** và các công nghệ **IoT**. Mục tiêu của tôi là phát triển các giải pháp sáng tạo, kết nối phần cứng và phần mềm để giải quyết các vấn đề trong cuộc sống.
+                </p>
+                <div class="tags">
+                    <div class="tag">HTML</div><div class="tag">CSS</div><div class="tag">JavaScript</div><div class="tag">C++</div><div class="tag">IoT</div>
+                </div>
+
+                <div style="margin-top:20px;display:flex;gap:12px">
+                    <a class="cta" href="#contact">Liên hệ ngay</a>
+                    <a style="padding:10px 12px;border-radius:10px;background:transparent;color:var(--muted);text-decoration:none" href="#projects">Xem dự án</a>
+                </div>
+            </div>
+
+            <aside class="profile card">
+                <div class="avatar">TT</div>
+                <div style="font-weight:700">Trần Văn Tám</div>
+                <div style="color:var(--muted);font-size:14px;text-align:center">Sinh viên yêu thích lập trình, điện tử và nghiên cứu công nghệ mới.</div>
+                <div class="contact" style="width:100%">
+                    <a href="mailto:tranvantam27042006@gmail.com">Email <span>tranvantam27042006@gmail.com</span></a>
+                    <a href="https://www.facebook.com/zentams2510">Facebook <span>Tại đây</span></a>
+                    <a href="tel:+84900000000">Phone <span>+84 900 000 000</span></a>
+                    <a href="#">Github <span>@yourusername</span></a>
+                </div>
+            </aside>
+        </section>
+
+        <section id="projects" class="projects" style="margin-top:28px">
+            <h2 style="margin:0 0 14px 0">Dự án nổi bật</h2>
+            <div class="grid">
+                <div class="item"><div class="project-title">Tên dự án 1</div></div>
+                <div class="item"><div class="project-title">Tên dự án 2</div></div>
+            </div>
+        </section>
+
+        <section id="docs" style="margin-top:28px" class="card">
+            <h2>Tài liệu học tập</h2>
+            <p style="color:var(--muted)">Tài liệu được phân theo từng năm học:</p>
+            <h3 class="folder" onclick="toggleFolder('nam1')">Năm 1</h3>
+            <ul id="nam1" class="hidden" style="list-style:none;padding:0;margin-top:12px">
+                <li><a href="Năm 1/MOI_TRUONG.pdf" download>Môi trường</a></li>
+                <li><a href="Năm 1/TRIẾT HỌC MACLENIN.pdf" download>Triết học Mac-Lenin (thầy Thành)</a></li>
+
+                <h4 class="folder" onclick="toggleFolder('vlbd')">Vật lý bán dẫn</h4>
+                <ul id="vlbd" class="hidden" style="list-style:none;padding-left:20px;margin-top:8px">
+                    <li><a href="Năm 1/Vật lý bán dẫn/Chapter 1 Basic Physics of Semiconductors.pptx" download>Chương 1: Basic Physics of Semiconductors</a></li>
+                    <li><a href="Năm 1/Vật lý bán dẫn/Chapter 2 Diode P1 (1).pdf" download>Chương 2: Diode</a></li>
+                    <li><a href="Năm 1/Vật lý bán dẫn/Chương 4. BJT (P1).pdf" download>Chương 3: BJT</a></li>
+                    <li><a href="Năm 1/Vật lý bán dẫn/Chương 4. BJT (P2).pdf" download>Chương 4: BJT (P2)</a></li>
+                    <li><a href="Năm 1/Vật lý bán dẫn/Chương 4. BJT (P3 - Đọc thêm).pdf" download>Chương 5: BJT (P3 - Đọc thêm)</a></li>
+                    <li><a href="Năm 1/Vật lý bán dẫn/VLBD.pdf" download>Ôn tập cuối kỳ Vật lý bán dẫn - Final</a></li>
+                </ul>
+
+                <h4 class="folder" onclick="toggleFolder('pbl1')">PBL1: Lập trình</h4>
+                <ul id="pbl1" class="hidden" style="list-style:none;padding-left:20px;margin-top:8px">
+                    <li><a href="Năm 1/PBL1/Maincode.cpp" download>Code đề tài: Quản lý đăng ký hội thảo</a></li>
+                    <li><a href="Năm 1/PBL1/code_thamkhao.cpp" download>Code tham khảo</a></li>
+                    <li><a href="Năm 1/PBL1/Slide_PBL01.final.pptx" download>Slide</a></li>
+                </ul>
+            </ul>
+        </section>
+
+        <section id="contact" style="margin-top:28px" class="card">
+            <h2>Liên hệ</h2>
+            <form id="contact-form">
+                <input type="text" name="user_name" placeholder="Tên của bạn" required>
+                <input type="email" name="user_email" placeholder="Email" required>
+                <textarea name="message" rows="5" placeholder="Nội dung" required></textarea>
+                <button type="submit">Gửi</button>
+            </form>
+            <p id="status"></p>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script>
+            (function(){
+                emailjs.init("n6SG8d2yhZN7E-mWt"); // thay bằng public_key của bạn
+            })();
+
+            document.getElementById("contact-form").addEventListener("submit", function(e) {
+                e.preventDefault();
+                emailjs.sendForm("service_4dn7d0n", "template_f32ebof", this)
+                    .then(() => {
+                        document.getElementById("status").innerText = "Gửi thành công!";
+                    }, (err) => {
+                        document.getElementById("status").innerText = "Lỗi: " + JSON.stringify(err);
+                    });
+            });
+        </script>
+
+        <footer>
+            © <span id="year"></span> Trần Văn Tám.<br>
+            Website cá nhân.
+            <br>
+            Facebook: <a href="https://www.facebook.com/zentams2510">Tại đây</a>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function handleSubmit(e){
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const msg = document.getElementById('message').value.trim();
+            const subject = encodeURIComponent('Contact from ' + name);
+            const body = encodeURIComponent('Email: ' + email + '\n\n' + msg);
+            window.location.href = `mailto:tranvantam27042006@gmail.com?subject=${subject}&body=${body}`;
+        }
+
+        function toggleFolder(id){
+            const folder = document.getElementById(id);
+            folder.classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>
